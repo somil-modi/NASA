@@ -1,0 +1,190 @@
+/* General styles for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header section */
+header {
+    background-color: #00796b;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb;
+}
+
+/* Main content section */
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Quiz container */
+#question-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+#question-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+/* Answer buttons */
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#answer-buttons button {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#answer-buttons button:hover {
+    background-color: #004d40;
+    transform: translateY(-3px);
+}
+
+#answer-buttons button:active {
+    background-color: #004d40;
+    transform: translateY(0);
+}
+
+/* Next button */
+#next-btn {
+    background-color: #0288d1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1em;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-btn:hover {
+    background-color: #01579b;
+    transform: translateY(-3px);
+}
+
+#next-btn:active {
+    background-color: #01579b;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Score display */
+#score-display {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #00796b;
+    margin-top: 20px;
+}
+
+/* Leaderboard & Badges section */
+#leaderboard, #badges {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+#cheer-badge {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    z-index: 10; /* Ensure it appears above other content */
+    transition: opacity 0.5s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+#cheer-badge.show {
+    opacity: 1; /* Visible when the class is added */
+}
